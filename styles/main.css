@@ -178,7 +178,7 @@ body {
 }
 .hero-left {
   width: 50%;
-  background: url(/assets/hero_tapes.png);
+  background: url(assets/hero_tapes.png);
   background-size: cover;
   background-position: center;
   aspect-ratio: 4/3;
@@ -188,7 +188,7 @@ body {
 }
 
 .reviews {
-  background: url(/assets/reviews.jpg);
+  background: url(assets/reviews.jpg);
   height: 270px;
   background-size: cover;
   background-position: right;
@@ -357,7 +357,7 @@ body {
   justify-content: center;
   align-items: center;
   height: inherit;
-  background: url(/assets/holiday_photo.png);
+  background: url(assets/holiday_photo.png);
   background-size: cover;
   color: white;
 }

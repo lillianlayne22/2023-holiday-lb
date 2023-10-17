@@ -1,0 +1,365 @@
+@import url("https://use.typekit.net/wnb0uei.css");
+@import url("https://use.typekit.net/wnb0uei.css");
+.copy, .copy-small, .copy-medium, .copy-large {
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.copy-large {
+  font-size: 20px;
+}
+.copy-medium {
+  font-size: 18px;
+}
+.copy-small {
+  font-size: 16px;
+}
+
+.font, .font-small, .font-medium, .font-large {
+  font-family: "orpheuspro", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-large {
+  font-size: 36px;
+}
+.font-medium {
+  font-size: 22px;
+}
+.font-small {
+  font-size: 18px;
+}
+
+.heading, .shop-cta, .heading-small, .heading-large {
+  font-family: "brandon-grotesque", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.heading-large {
+  font-size: 15px;
+}
+.heading-small {
+  font-size: 12px;
+}
+
+.shop-cta {
+  display: flex;
+  width: 285px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background: #D23738;
+  border-radius: 5px;
+  color: white;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.learn-cta {
+  font-weight: 450;
+  line-height: 9px;
+  text-decoration-line: underline;
+  letter-spacing: 0.12em;
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.promo {
+  width: inherit;
+  height: 40px;
+  color: white;
+  background: #AE7008;
+  padding-left: 10%;
+  padding-right: 10%;
+  position: sticky;
+}
+.promo-banner {
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+  height: inherit;
+  align-items: center;
+}
+.promo-banner .heading-large {
+  letter-spacing: 0.12em;
+}
+.promo-banner .timer {
+  display: flex;
+  gap: 5px;
+}
+.promo-banner .timer-element {
+  height: 30px;
+  width: 30px;
+  background: white;
+}
+
+.fixed-top {
+  width: inherit;
+  height: auto;
+  position: sticky;
+  z-index: 99;
+}
+
+.nav {
+  width: inherit;
+  height: 45px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+}
+.nav-left {
+  display: flex;
+  float: left;
+  gap: 50px;
+  margin-left: 10%;
+}
+.nav-right {
+  display: flex;
+  float: right;
+  margin-right: 10%;
+  gap: 50px;
+  text-transform: uppercase;
+  color: #6D7278;
+}
+.nav-right .copy, .nav-right .copy-large, .nav-right .copy-medium, .nav-right .copy-small {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+.nav img {
+  height: 20px;
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.getready {
+  align-items: center;
+  justify-content: center;
+  background: url(/assets/holiday_hero.png);
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  display: flex;
+  color: white;
+}
+.getready .font, .getready .font-large, .getready .font-medium, .getready .font-small {
+  font-size: 64px;
+}
+
+.shipping {
+  width: 100%;
+  height: auto;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: #FFF9E7;
+  display: flex;
+  justify-content: space-between;
+}
+.shipping-copy {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  padding-left: 10%;
+  gap: 32px;
+}
+.shipping-copy .font-large {
+  text-transform: capitalize;
+  line-height: 48px;
+}
+.shipping-dates {
+  display: flex;
+  gap: 20px;
+  padding-right: 10%;
+}
+
+.shop {
+  width: 100%;
+  height: auto;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+.shop-wrapper {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 20px;
+  margin-top: 32px;
+}
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+.shop-card-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  width: 100%;
+}
+.shop-card-contents .top-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.shop-card-contents .top-row .pricing {
+  display: flex;
+  gap: 8px;
+}
+.shop-card-contents .top-row .pricing-discount {
+  color: #D23738;
+  font-weight: 500;
+}
+.shop-card-contents .top-row .pricing-regular {
+  text-decoration: line-through 1px;
+  color: #6D7278;
+}
+.shop-card-contents .bottom-row {
+  width: 100%;
+}
+.shop-card .shop-cta {
+  width: 100%;
+  margin-top: 32px;
+}
+.shop img {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.rush {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  width: 100%;
+  height: auto;
+  background: url(/assets/rush_box.jpg);
+  background-size: cover;
+  height: 720px;
+  color: white;
+  text-align: center;
+  background-position: bottom;
+}
+.rush-title {
+  padding-bottom: 8px;
+  text-align: center;
+  line-height: 48px;
+}
+.rush .shop-cta {
+  margin-top: 32px;
+}
+
+.giftguide {
+  width: 100%;
+  width: 100%;
+  height: auto;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+.giftguide-one {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  width: 80%;
+  height: 450px;
+  background: url(/assets/GiftGuide_1.png);
+  background-size: cover;
+}
+.giftguide-one .font-large {
+  text-transform: capitalize;
+  line-height: 48px;
+  margin-bottom: 8px;
+}
+.giftguide-one-copy {
+  padding: 10%;
+}
+.giftguide-one .shop-cta {
+  margin-top: 32px;
+}
+.giftguide-two {
+  display: flex;
+  width: 80%;
+  padding-top: 20px;
+  gap: 20px;
+  justify-content: space-between;
+  height: 200px;
+}
+.giftguide-two .card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  justify-content: center;
+  gap: 32px;
+}
+.giftguide-two .card .font-medium {
+  line-height: 28px;
+  width: 60%;
+}
+.giftguide-two .card-one {
+  background: url(/assets/GiftGuide_2.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  padding-left: 2%;
+  padding-right: 10%;
+}
+.giftguide-two .card-two {
+  background: url(/assets/GiftGuide_3.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-left: 2%;
+  padding-right: 10%;
+  background-position: center;
+}
+.giftguide-two .card-three {
+  background: url(/assets/GiftGuide_4.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  padding-left: 2%;
+  padding-right: 10%;
+  background-position: center;
+}
+
+.output {
+  width: 100%;
+  height: 720px;
+  background-color: #FFF9E7;
+}/*# sourceMappingURL=holidaymain.css.map */

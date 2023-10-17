@@ -1,0 +1,384 @@
+@import 'global';
+@import 'typography';
+
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+ // section margins top and bottom
+@mixin padding {
+    width: 100%;
+    height: auto;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+// section margins left and right
+@mixin margins {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+@mixin flex-container-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+@mixin flex-container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+}
+
+
+
+@mixin wrapper {
+    display: flex;
+    @include margins;
+    gap: 20px;
+    margin-top: $spacing-large;
+}
+
+@mixin card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 100%;
+}
+
+.promo {
+    width: inherit;
+    height: 40px;
+    color: white;
+    background: $holiday-color-gold;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: sticky;
+    
+    &-banner {
+        display: flex;
+        width: inherit;
+        justify-content: space-between;
+        height: inherit;
+        align-items: center;
+        
+        
+        .heading-large {
+            letter-spacing: .12em;
+        }
+
+        .timer {
+           display: flex;
+           gap: 5px;
+
+           &-element {
+            height: 30px;
+            width: 30px;
+            background: white;
+           }
+        }
+    }
+
+}
+
+.fixed-top {
+    width: inherit;
+    height: auto;
+    position: sticky;
+    z-index: 99;
+}
+
+.nav {
+    width: inherit;
+    height: 45px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+
+    &-left {
+        display: flex;
+        float: left;
+        gap: 50px;
+        margin-left: 10%;
+    }
+
+    &-right {
+        display: flex;
+        float: right;
+        margin-right: 10%;
+        gap: 50px;
+        text-transform: uppercase;
+        color: $global-font-color-copy;
+
+        .copy {
+            font-size: 12px;
+            letter-spacing: .12em;
+        }
+    }
+
+    img {
+        height: 20px;
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+
+}
+
+.hero {
+    display: flex;
+    color: white;
+    text-align: center;
+
+    &-right {
+        @include flex-container-column;
+        @include padding;
+        gap: $spacing-large;
+        width: 50%;
+        background: $holiday-color-green;
+    }
+
+    &-copy {
+        @include flex-container-column;
+        gap: $spacing-xsmall;
+    }
+
+    &-flourish {
+        letter-spacing: .12em;
+    }
+
+    &-left {
+        width: 50%;
+        background: url(/assets/hero_tapes.png);
+        background-size: cover;
+        background-position: center;
+        aspect-ratio: 4/3;
+    }
+
+    &-display {
+        font-size: 68px;
+    }
+}
+
+.reviews {
+    background: url(/assets/reviews.jpg);
+    height: 270px;
+    background-size: cover;
+    background-position: right;
+  
+
+    &-content {
+        @include flex-container-column;
+        width: 50%;
+        text-align: center;
+        line-height: 22px;
+    }
+
+    &-attributes {
+        display: flex;
+        letter-spacing: .12em;
+        gap: $spacing-medium;
+        margin-bottom: $spacing-large;
+    }
+}
+
+.featured {
+    height: 50px;
+    background: $holiday-color-green;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+
+    &-wrapper {
+        display: flex;
+        gap: 64px;
+        height: inherit;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-logo {
+        height: 22px;
+    }
+}
+
+.shop {
+    @include padding;
+    @include flex-container-column;
+
+    &-wrapper {
+        @include wrapper;
+    }
+
+    &-card {
+        @include flex-container-column;
+
+        &-contents {
+            @include flex-container-column;
+            width: 100%; 
+                                
+            .top-row {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+               
+                .pricing {
+                    display: flex;
+                    gap: $spacing-small;
+                    
+                    &-discount {
+                        color: $holiday-color-red;
+                        font-weight: 500;
+                    }
+
+                    &-regular {
+                        text-decoration: line-through 1px;
+                        color: $global-font-color-copy;
+                    }
+                }   
+            }
+
+            .bottom-row {
+                width: 100%;
+            }
+        }
+
+        .shop-cta {
+            width: 100%;
+            margin-top: $spacing-large;
+        }
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: $spacing-small;
+    }
+}
+
+.hiw {
+    @include padding;
+    background: $holiday-color-gold;
+    @include flex-container-column;
+
+        &-header {
+            text-align: center;
+            color: white;
+            margin-bottom: $spacing-large;
+
+            .body {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                align-items: baseline;
+                
+            }
+        }
+
+        &-wrapper {
+            @include wrapper;
+            @include margins;
+
+            &-card {
+                @include flex-container-column;
+                width: 100%;
+                text-align: center;
+                color: white;
+
+                .font-medium {
+                    text-transform: capitalize;
+                    margin-bottom: $spacing-small;
+                }
+
+                .copy-small {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                img {
+                    width: 100%;
+                    margin-bottom: $spacing-large;
+                }
+            }
+        }
+
+        .shop-cta {
+            margin-top: 50px;
+        }
+       
+}
+
+.holiday {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom:100px;
+    @include flex-container-column;
+    background: url(/assets/holiday_photo.png);
+    background-size: cover;
+    color: white;
+
+    .font-large {
+        text-transform: capitalize;
+    }
+
+    .learn-cta {
+        margin-top: $spacing-large;
+    }
+}
+
+
+.media {
+    @include padding;
+    @include flex-container-column;
+    text-align: center;
+    text-transform: capitalize;
+
+    &-wrapper {
+        @include wrapper;
+
+        &-card {
+            @include card;
+
+            img {
+                width: 100%;
+                transform: scale(.75);
+            }
+
+            .copy-small {
+                color: $global-font-color-copy;
+            }
+
+            .learn-cta {
+                color: $global-font-color-copy;
+            }
+
+            .font-large, .font-medium {
+                color: $global-font-color-headings;
+            }
+        }
+    }
+}
+
+.footer {
+    width: inherit;
+    height: 600px;
+    background-color: $holiday-color-cream;
+}

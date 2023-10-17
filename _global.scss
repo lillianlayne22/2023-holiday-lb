@@ -1,0 +1,120 @@
+@import 'typography';
+
+
+
+$global-font-primary: 'orpheuspro', serif;
+$global-font-secondary: 'brandon-grotesque', sans-serif;
+
+
+// normal colors
+$global-color-mauve: #B96077;
+$glbal-color-green: #94bfa9;
+$global-color-black: #15171A;
+$global-color-white: #fff;
+
+// font colors
+$global-font-color-copy: #6D7278;
+$global-font-color-headings: #15171A;
+$global-font-color-flourish: #DBDEE1;
+
+// holiday colors 
+$holiday-color-green: #24372C;
+$holiday-color-red: #D23738;
+$holiday-color-pink: #EA5E57;
+$holiday-color-cream: #FFF9E7;
+$holiday-color-gold: #AE7008;
+
+// spacing 
+$spacing-large: 32px;
+$spacing-medium: 16px;
+$spacing-small: 8px;
+$spacing-xsmall: 4px; 
+
+// typography - body copy
+.copy {
+    font-family: $global-font-secondary;
+    font-weight: 300;
+    font-style: normal;
+
+    &-large {
+        @extend .copy;
+        font-size: 20px;
+    }
+
+    &-medium {
+        @extend .copy;
+        font-size: 18px;
+    }
+
+    &-small {
+        @extend .copy;
+        font-size: 16px;
+    }
+
+}
+
+
+// typography - headings 
+.font {
+    font-family: $global-font-primary;
+    font-weight: 400;
+    font-style: normal;
+
+    &-large {
+        @extend .font;
+        font-size: 36px;
+    }
+
+    &-medium {
+        @extend .font;
+        font-size: 22px;
+    }
+
+    &-small {
+        @extend .font;
+        font-size: 18px;
+    }
+}
+
+// typography - flourish
+.heading {
+    font-family: $global-font-secondary;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+
+        &-large {
+            @extend .heading;
+            font-size: 15px;
+        }
+
+        &-small {
+            @extend .heading;
+            font-size: 12px;
+        }
+}
+
+.shop-cta {
+    display: flex;
+    width: 285px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background: $holiday-color-red;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: .12em;
+    @extend .heading;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.learn-cta {
+    font-weight: 450;
+    line-height: 9px;
+    text-decoration-line: underline;
+    letter-spacing: .12em;
+    font-family: $global-font-secondary;
+    font-size: 12px;
+    text-transform: uppercase;
+}

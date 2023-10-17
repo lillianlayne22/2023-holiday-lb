@@ -1,0 +1,363 @@
+@import 'global';
+@import 'typography';
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+ // section margins top and bottom
+@mixin padding {
+    width: 100%;
+    height: auto;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+// section margins left and right
+@mixin margins {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+@mixin flex-container-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+@mixin flex-container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+}
+
+
+
+@mixin wrapper {
+    display: flex;
+    @include margins;
+    gap: 20px;
+    margin-top: $spacing-large;
+}
+
+@mixin card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 100%;
+}
+
+.promo {
+    width: inherit;
+    height: 40px;
+    color: white;
+    background: $holiday-color-gold;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: sticky;
+    
+    &-banner {
+        display: flex;
+        width: inherit;
+        justify-content: space-between;
+        height: inherit;
+        align-items: center;
+        
+        
+        .heading-large {
+            letter-spacing: .12em;
+        }
+
+        .timer {
+           display: flex;
+           gap: 5px;
+
+           &-element {
+            height: 30px;
+            width: 30px;
+            background: white;
+           }
+        }
+    }
+
+}
+
+.fixed-top {
+    width: inherit;
+    height: auto;
+    position: sticky;
+    z-index: 99;
+}
+
+.nav {
+    width: inherit;
+    height: 45px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+
+    &-left {
+        display: flex;
+        float: left;
+        gap: 50px;
+        margin-left: 10%;
+    }
+
+    &-right {
+        display: flex;
+        float: right;
+        margin-right: 10%;
+        gap: 50px;
+        text-transform: uppercase;
+        color: $global-font-color-copy;
+
+        .copy {
+            font-size: 12px;
+            letter-spacing: .12em;
+        }
+    }
+
+    img {
+        height: 20px;
+        float: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+
+}
+
+.getready {
+    .font {
+        font-size: 64px;
+    }
+
+    align-items: center;
+    justify-content: center;
+    background: url(/assets/holiday_hero.png);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    display: flex;
+    color: white;
+}
+
+.shipping {
+    @include padding;
+    background-color: $holiday-color-cream;
+    display: flex;
+    justify-content: space-between;
+
+    &-copy {
+        width: 30%;
+        @include flex-container-column;
+        padding-left: 10%;
+        gap: $spacing-large;
+
+        .font-large {
+            text-transform: capitalize;
+            line-height: 48px;
+        }
+    }
+
+    &-dates {
+        display: flex;
+        gap: 20px;
+        padding-right: 10%;
+    }
+
+}
+
+.shop {
+    @include padding;
+    @include flex-container-column;
+
+    &-wrapper {
+        @include wrapper;
+    }
+
+    &-card {
+        @include flex-container-column;
+
+        &-contents {
+            @include flex-container-column;
+            width: 100%; 
+                                
+            .top-row {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+               
+                .pricing {
+                    display: flex;
+                    gap: $spacing-small;
+                    
+                    &-discount {
+                        color: $holiday-color-red;
+                        font-weight: 500;
+                    }
+
+                    &-regular {
+                        text-decoration: line-through 1px;
+                        color: $global-font-color-copy;
+                    }
+                }   
+            }
+
+            .bottom-row {
+                width: 100%;
+            }
+        }
+
+        .shop-cta {
+            width: 100%;
+            margin-top: $spacing-large;
+        }
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: $spacing-small;
+    }
+}
+
+.rush {
+    @include flex-container-column;
+    width: 100%;
+    height: auto;
+    background: url(/assets/rush_box.jpg);
+    background-size: cover;
+    height: 720px;
+    color: white;
+    text-align: center;
+    background-position: bottom;
+
+    &-title {
+        padding-bottom: $spacing-small;
+        text-align: center;
+        line-height: 48px;
+    }
+
+    .shop-cta {
+        margin-top: $spacing-large;
+    }
+        
+    }
+
+    .giftguide {
+        width: 100%;
+        @include padding;
+        @include flex-container-column;
+
+        &-one {
+            @include margins;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            width: 80%;
+            height: 450px;
+            background: url(/assets/GiftGuide_1.png);
+            background-size: cover;
+            
+
+            .font-large {
+                text-transform: capitalize;
+                line-height: 48px;
+                margin-bottom: $spacing-small;
+
+            }
+
+            &-copy {
+                padding: 10%;
+            }
+
+            .shop-cta {
+                margin-top: $spacing-large;
+            }
+        }
+
+        &-two {
+            display: flex;
+            width: 80%;
+            padding-top: 20px;
+            gap: 20px;
+            justify-content: space-between;
+            height: 200px;
+
+            .card {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                text-transform: capitalize;
+                justify-content: center;
+                gap: $spacing-large;
+                
+                .font-medium {
+                    line-height: 28px;
+                    width: 60%;
+                }
+                
+
+
+            &-one {
+                background: url(/assets/GiftGuide_2.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: white;
+                padding-left: 2%;
+                padding-right: 10%;
+            }
+
+            &-two {
+                background: url(/assets/GiftGuide_3.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                padding-left: 2%;
+                padding-right: 10%;
+                background-position: center;
+            }
+
+            &-three {
+                background: url(/assets/GiftGuide_4.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                color: white;
+                padding-left: 2%;
+                padding-right: 10%;
+                background-position: center;
+            }
+            }
+        }
+    }
+
+    .output {
+        width: 100%;
+        height: 720px;
+        background-color: $holiday-color-cream;
+    }
+
+
+
+    
+
+
+

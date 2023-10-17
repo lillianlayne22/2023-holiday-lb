@@ -360,6 +360,7 @@ body {
   background: url("../assets/holiday_photo.png");
   background-size: cover;
   color: white;
+  height: auto;
 }
 .holiday .font-large {
   text-transform: capitalize;

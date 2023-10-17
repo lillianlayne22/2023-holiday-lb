@@ -67,6 +67,10 @@
   text-transform: uppercase;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   display: block;
   margin: 0;

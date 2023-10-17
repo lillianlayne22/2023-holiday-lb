@@ -1,7 +1,9 @@
 @import 'global';
 @import 'typography';
 
-
+a {
+    text-decoration: none;
+}
 body {
     display: block;
     margin: 0;

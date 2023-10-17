@@ -333,7 +333,7 @@ body {
 }
 .giftguide-two .card-one {
   background: url("../assets/GiftGuide_2.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: white;
@@ -342,7 +342,7 @@ body {
 }
 .giftguide-two .card-two {
   background: url("../assets/GiftGuide_3.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   padding-left: 2%;
   padding-right: 10%;
@@ -350,7 +350,7 @@ body {
 }
 .giftguide-two .card-three {
   background: url("../assets/GiftGuide_4.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   color: white;
   padding-left: 2%;

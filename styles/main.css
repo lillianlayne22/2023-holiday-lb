@@ -357,7 +357,7 @@ body {
   justify-content: center;
   align-items: center;
   height: inherit;
-  background: url(../assets/holiday_photo.png);
+  background: url(/assets/holiday_photo.png);
   background-size: cover;
   color: white;
 }

@@ -350,29 +350,34 @@ body {
 
 .holiday {
   width: 100%;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  height: auto;
+  background-image: url("/assets/holiday_photo.png");
+  background-size: contain;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: inherit;
-  background: url("../assets/holiday_photo.png");
-  background-size: cover;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+.holiday-content {
+  padding: 50px;
   color: white;
-  height: auto;
 }
 .holiday .font-large {
   text-transform: capitalize;
 }
+.holiday a {
+  color: white;
+}
 .holiday .learn-cta {
   margin-top: 32px;
 }
-.holiday .learn-cta a {
-  text-decoration: none;
-}
 
 .media {
+  margin-top: 75px;
+  margin-bottom: 75px;
   width: 100%;
   height: auto;
   padding-top: 75px;
@@ -382,8 +387,6 @@ body {
   justify-content: center;
   align-items: center;
   height: inherit;
-  text-align: center;
-  text-transform: capitalize;
 }
 .media-wrapper {
   display: flex;
@@ -392,7 +395,14 @@ body {
   gap: 20px;
   margin-top: 32px;
 }
-.media-wrapper-card {
+.media-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+.media-card-contents {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -400,18 +410,25 @@ body {
   height: inherit;
   width: 100%;
 }
-.media-wrapper-card img {
+.media-card-contents .top-row {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
-  transform: scale(0.75);
 }
-.media-wrapper-card .copy-small {
+.media-card-contents .top-row .copy-small {
   color: #6D7278;
 }
-.media-wrapper-card .learn-cta {
-  color: #6D7278;
+.media-card-contents .bottom-row {
+  width: 100%;
 }
-.media-wrapper-card .font-large, .media-wrapper-card .font-medium {
-  color: #15171A;
+.media-card .learn-cta {
+  width: 100%;
+  margin-top: 32px;
+}
+.media img {
+  width: 100%;
+  margin-bottom: 8px;
 }
 
 .footer {

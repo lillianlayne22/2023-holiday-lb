@@ -329,59 +329,81 @@ body {
 
 .holiday {
     width: 100%;
-    padding-top: 100px;
-    padding-bottom:100px;
-    @include flex-container-column;
-    background: url('../assets/holiday_photo.png');
-    background-size: cover;
-    color: white;
     height: auto;
+    background-image: url('/assets/holiday_photo.png');
+    background-size: contain;
+    @include flex-container-column;
+    text-align: center;
+    background-repeat: no-repeat;
+    
+    &-content {
+        padding: 50px;
+        color: white;
+    }
+
 
     .font-large {
         text-transform: capitalize;
     }
 
+    a {
+        color: white;
+    }
+
     .learn-cta {
         margin-top: $spacing-large;
 
-        a {
-            text-decoration: none;
-        }
+       
     }
 }
 
 
 .media {
+    margin-top: 75px;
+    margin-bottom: 75px;
     @include padding;
     @include flex-container-column;
-    text-align: center;
-    text-transform: capitalize;
 
     &-wrapper {
         @include wrapper;
+    }
 
-        &-card {
-            @include card;
+    &-card {
+        @include flex-container-column;
 
-            img {
+
+        &-contents {
+            @include flex-container-column;
+            width: 100%; 
+                                
+            .top-row {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
                 width: 100%;
-                transform: scale(.75);
+
+                .copy-small {
+                    color: $global-font-color-copy;
+                }
             }
 
-            .copy-small {
-                color: $global-font-color-copy;
-            }
-
-            .learn-cta {
-                color: $global-font-color-copy;
-            }
-
-            .font-large, .font-medium {
-                color: $global-font-color-headings;
+            .bottom-row {
+                width: 100%;
             }
         }
+
+        .learn-cta {
+            width: 100%;
+            margin-top: $spacing-large;
+        }
+    }
+
+    img {
+        width: 100%;
+        margin-bottom: $spacing-small;
     }
 }
+
 
 .footer {
     width: inherit;

@@ -1,9 +1,8 @@
 @import 'global';
 @import 'typography';
 
-a {
-    text-decoration: none;
-}
+
+
 body {
     display: block;
     margin: 0;
@@ -343,6 +342,10 @@ body {
 
     .learn-cta {
         margin-top: $spacing-large;
+
+        a {
+            text-decoration: none;
+        }
     }
 }
 

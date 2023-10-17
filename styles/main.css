@@ -67,10 +67,6 @@
   text-transform: uppercase;
 }
 
-a {
-  text-decoration: none;
-}
-
 body {
   display: block;
   margin: 0;
@@ -370,6 +366,9 @@ body {
 }
 .holiday .learn-cta {
   margin-top: 32px;
+}
+.holiday .learn-cta a {
+  text-decoration: none;
 }
 
 .media {
